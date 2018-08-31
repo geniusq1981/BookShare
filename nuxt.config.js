@@ -30,6 +30,9 @@ module.exports = {
   plugins:[
     {src:'~plugins/element-ui',ssr:true}
   ],
+  css: [
+    'element-ui/lib/theme-chalk/index.css'
+  ],
   /*
   ** Customize the progress bar color
   */
