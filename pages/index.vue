@@ -1,6 +1,8 @@
 <template>
   <section class="">
     <Myheader></Myheader>
+    <Carousel></Carousel>
+    <Navbar :indexClass="allparentinfo.indexclass"></Navbar>
     <div>
       <app-logo/>
       <el-button>sfsf</el-button>
@@ -21,16 +23,29 @@
           class="button--grey">GitHub</a>
       </div>
     </div>
+    <MyFooter></MyFooter>
   </section>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import Myheader from '~/components/Home/Myheader.vue'
+import Navbar from '~/components/Home/Navbar.vue'
+import MyFooter from '~/components/Home/MyFooter.vue'
 export default {
+  data () {
+    return {
+      allparentinfo: {indexclass: ['首页', "test2", "test3"]}
+    }
+  },
+  created () {
+    //console.log(allparentinfo.indexclass)
+  },
   components: {
     AppLogo,
-    Myheader
+    Myheader,
+    Navbar,
+    MyFooter
   }
 }
 </script>

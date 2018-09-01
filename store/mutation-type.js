@@ -1,0 +1,9 @@
+export const book_PARAMS = 'book_PARAMS' // 课程筛选列表
+export const book_ARR = 'book_ARR' // 课程筛选列表
+export const TOUCHEND = 'TOUCHEND' // 课程筛选列表
+export const book_TYPE = 'book_TYPE' // 课程筛选类型
+export const book_ID = 'book_ID' // 课程筛选类型
+export const book_SORT = 'book_SORT' // 课程排序
+export const book_DETAIL = 'book_DETAIL' // 课程排序
+export const CART = 'CART' // 购物车
+export const ORDERDATA = 'ORDERDATA' // 订单信息

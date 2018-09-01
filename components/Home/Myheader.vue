@@ -7,8 +7,8 @@
       </span>
       </div>
       <el-row class="header_bar">
-      <el-col :span="6"><nuxt-link to="/" class="header_logo">书享</nuxt-link></el-col>
-      <el-col :span="12"><el-input class="" v-model="input" placeholder="请输入内容"></el-input></el-col>
+      <el-col :span="6" class="header_logo"><nuxt-link to="/"><div class="logo"></div></nuxt-link></el-col>
+      <el-col :span="12"><el-input class="header_search" v-model="input" placeholder="请输入内容"></el-input></el-col>
       </el-row>
   </header>
 </template>
@@ -17,7 +17,8 @@
 export default {
   data () {
     return {
-      islogin: true
+      islogin: true,
+      input: ""
     }
   },
   methods: {
@@ -41,15 +42,16 @@ export default {
           padding: 15px
         .header_bar
           height: 30%
-          background-color: #ff0000
-          padding: 15px
         .right
           float: right
         .header_logo
-          padding: 10px
-          width: 500px
-          height: 100px
-          font-size: 30pt 
+          font-size: 36pt 
+          height: 100%
+          .logo
+            width: 70%
+            height: 150px
+            background: url('~/static/images/logo1.jpg') no-repeat center
+            background-size: 100% 100%
         .input_box
           padding: 15px
           height: 25px
@@ -57,7 +59,12 @@ export default {
           margin: auto
         .index_sear_inp
           font-size: 20pt
-        .search
-          width: 50%
-          margin-left： 30px
+        .header_search
+          height: 100%
+          font-size: 1.8rem
+          margin-top: 4%
+          .el-input__inner
+            height: 100%
+            padding: 15px
+            margin: 15px
 </style>

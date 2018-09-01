@@ -1,0 +1,37 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+}
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%!important;
+  color: #474747;
+}
+body {
+  font-family: 'Microsoft YaHei', 'Hiragino Sans GB', 'Arail';
+  margin: 0;
+  background: #fff;
+}
+/*--- 元素多余间距值 ---*/
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+em,
+i {
+  font-style: normal;
+}
+img {
+  vertical-align: middle;
+}
