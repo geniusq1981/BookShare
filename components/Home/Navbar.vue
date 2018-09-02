@@ -1,6 +1,6 @@
 <template>
-  <div id="Navbar">
-      <el-menu :default-active="activeIndex" class="main-nav" background-color="#e5e5e5" text-color="#00ff00" active-text-color="#ffd04b" mode="horizontal"  @select="handleSelect">
+  <div id="Navbar" class="basicbox">
+      <el-menu :default-active="activeIndex" class="main-nav" text-color="#00ff00" active-text-color="#ffd04b" mode="horizontal"  @select="handleSelect">
           <el-menu-item class="nav-item" v-for="(value,index) in indexClass" :key="value.id" :index="index">{{value}}</el-menu-item>
       </el-menu>
   </div>
@@ -34,11 +34,12 @@ export default {
 </script>
 <style lang="sass">
     #Navbar
-        .main-nav
-            .nav-item
-                height: 80px
-                line-height: 80px
-                width: 15%
-                text-align: center
-                font-size: 20pt
+      .main-nav
+        border-bottom: solid 2px #5c5050
+        .nav-item
+          height: 60px
+          line-height: 60px
+          width: 15%
+          text-align: center
+          font-size: 1.8rem
 </style>

@@ -1,12 +1,12 @@
 <template>
   <header id="header" class="all_nav_zone">
-      <div class="top_bar">分享图书，分享快乐
+      <div class="basicbox top_bar">分享图书，分享快乐
       <span class="right">
         <nuxt-link to="" class="">注册|</nuxt-link>
         <nuxt-link to="" class="">登录</nuxt-link>
       </span>
       </div>
-      <el-row class="header_bar">
+      <el-row class="basicbox header_bar">
       <el-col :span="6" class="header_logo"><nuxt-link to="/"><div class="logo"></div></nuxt-link></el-col>
       <el-col :span="12"><el-input class="header_search" v-model="input" placeholder="请输入内容"></el-input></el-col>
       </el-row>
@@ -37,9 +37,11 @@ export default {
         height: 20%
         .top_bar
           color: #999
-          height: 10%
+          height: 40px
+          line-height: 40px
           background-color: #f5f5f5
-          padding: 15px
+          border-bottom: 1px solid #ddd
+          font-size: 1.4rem
         .header_bar
           height: 30%
         .right
