@@ -4,27 +4,7 @@
     <Carousel></Carousel>
     <Navbar :indexClass="allparentinfo.indexclass"></Navbar>
     <div class="basicbox book-gallery">
-      <BookGallery></BookGallery>
-    </div>
-    <div>
-      <app-logo/>
-      <el-button>sfsf</el-button>
-      <h1 class="title">
-        bookshare
-      </h1>
-      <h2 class="subtitle">
-        bookshare Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+      <BookShow></BookShow>
     </div>
     <MyFooter></MyFooter>
   </section>
@@ -34,7 +14,7 @@
 import AppLogo from '~/components/AppLogo.vue'
 import Myheader from '~/components/Home/Myheader.vue'
 import Navbar from '~/components/Home/Navbar.vue'
-import BookGallery from '~/components/Home/BookGallery.vue'
+import BookShow from '~/components/Body/BookShow.vue'
 import MyFooter from '~/components/Home/MyFooter.vue'
 export default {
   data () {
@@ -49,7 +29,7 @@ export default {
     AppLogo,
     Myheader,
     Navbar,
-    BookGallery,
+    BookShow,
     MyFooter
   }
 }

@@ -13,6 +13,15 @@ body {
   margin: 0;
   background: #fff;
 }
+a {
+  color: #474747;
+  text-decoration: none;
+}
+a:focus,
+a.active,
+a:hover {
+  text-decoration: none;
+}
 /*--- 元素多余间距值 ---*/
 ul,
 p,

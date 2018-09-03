@@ -13,7 +13,7 @@
     <footer v-else>
         <p class="top_line"></p>
         <div class="footarea">
-
+            <p>Copyright © 2014-2018</p>
         </div>
     </footer>
   </div>
@@ -94,9 +94,16 @@ export default {
               background-size: 19px 20px    
     footer
       .footarea
-        position: relative
         left: 0
+        padding: 50px
         width: 100%
         height: 150px
-        background: #34495e               
+        color: #fff
+        font-size: 20pt
+        background: #34495e 
+        text-align: center
+        p
+          height: 30px
+          line-height: 30px
+                      
 </style>

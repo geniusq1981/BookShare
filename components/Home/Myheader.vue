@@ -8,7 +8,7 @@
       </div>
       <el-row class="basicbox header_bar">
       <el-col :span="6" class="header_logo"><nuxt-link to="/"><div class="logo"></div></nuxt-link></el-col>
-      <el-col :span="12"><el-input class="header_search" v-model="input" placeholder="请输入内容"></el-input></el-col>
+      <el-col :span="12"><el-input class="header_search" v-model="input" placeholder="请输入内容"><el-button slot="append" icon="el-icon-search"></el-button></el-input></el-col>
       </el-row>
   </header>
 </template>
@@ -64,9 +64,8 @@ export default {
         .header_search
           height: 100%
           font-size: 1.8rem
-          margin-top: 4%
+          margin-top: 50px
           .el-input__inner
             height: 100%
             padding: 15px
-            margin: 15px
 </style>
