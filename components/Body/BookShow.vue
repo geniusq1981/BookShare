@@ -45,9 +45,11 @@
         </el-col>
     </el-col>
     <el-col :span="6" offset="2" class="right_area">
-        <a style="position:absolute;width:100%;height:20%;" >
-            <img :src="book.img"/>
-        </a>
+        <div class="Ad"></div>
+        <div class="RecommendList">  
+            <div class="title_2">读书推荐</div>
+            <div class="content_box">123</div>
+        </div>
     </el-col>
     </el-row>
     </div>
@@ -106,4 +108,12 @@ export default {
         font-weight: bold;
         line-height: 22px;
         padding-left: 8px;
+    .Ad
+      width: 100%
+      height: 250px
+      border: 1px solid #999
+    .RecommendList
+      margin-top: 50px
+      width: 100%
+      height: 500px
 </style>
