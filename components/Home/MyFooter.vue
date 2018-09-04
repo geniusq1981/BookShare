@@ -40,7 +40,7 @@ export default {
         bottom: 0
         width: 100%
       .top_line
-          height: 60px
+          height: 10px
           background: #eee
           border-bottom: 1px solid #ddd
       ul
@@ -95,11 +95,11 @@ export default {
     footer
       .footarea
         left: 0
-        padding: 50px
+        padding: 10px
         width: 100%
-        height: 150px
+        height: 50px
         color: #fff
-        font-size: 20pt
+        font-size: 1.5rem
         background: #34495e 
         text-align: center
         p

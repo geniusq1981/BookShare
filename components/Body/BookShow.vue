@@ -30,20 +30,8 @@
      <el-row>
         <div class="title_2">目录</div>
         <div class="content_box">123</div>
-    </el-row>
-        <el-col :span="3" v-for="(val, index) in books" :key="val" :offset="index==0?0:1" :index="index">
-            <el-card class="card" :body-style="{padding: '0px'}">
-                <nuxt-link :to="val.unid">
-                <img :src="val.img" class="image">
-                </nuxt-link>
-                <div style="padding: 14px;text-algin:center">
-                    <nuxt-link to="/bookhome" class="bookname">
-                    {{val.title}}
-                    </nuxt-link>
-                </div>
-            </el-card>
-        </el-col>
-    </el-col>
+     </el-row>
+     </el-col>
     <el-col :span="6" offset="2" class="right_area">
         <div class="Ad"></div>
         <div class="RecommendList">  
@@ -99,15 +87,9 @@ export default {
         padding: 10px
         button
          margin-top: 30px
+         font-size: 2rem arial
          &.righttwo
            margin-left: 50px
-      .bookname
-        color: #4c4c4c;
-        margin-top: 10px;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 22px;
-        padding-left: 8px;
     .Ad
       width: 100%
       height: 250px

@@ -1,6 +1,6 @@
 <template>
-  <div id="Navbar" class="basicbox">
-      <el-menu :default-active="activeIndex" class="main-nav" text-color="#00ff00" active-text-color="#ffd04b" mode="horizontal"  @select="handleSelect">
+  <div id="Navbar" class="basicbox" style="background-color: #34495e;">
+      <el-menu :default-active="activeIndex" class="main-nav" text-color="#fff" background-color="#34495e" active-text-color="#ffd04b" mode="horizontal"  @select="handleSelect">
           <el-menu-item class="nav-item" v-for="(value,index) in indexClass" :key="value.id" :index="index">{{value}}</el-menu-item>
       </el-menu>
   </div>

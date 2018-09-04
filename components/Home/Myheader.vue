@@ -7,8 +7,9 @@
       </span>
       </div>
       <el-row class="basicbox header_bar">
-      <el-col :span="6" class="header_logo"><nuxt-link to="/"><div class="logo"></div></nuxt-link></el-col>
-      <el-col :span="12"><el-input class="header_search" v-model="input" placeholder="请输入内容"><el-button slot="append" icon="el-icon-search"></el-button></el-input></el-col>
+      <el-col :span="8" class="header_logo"><nuxt-link to="/"><div class="logo"></div></nuxt-link></el-col>
+      <el-col :span="8" class="header_text">图书分享</el-col>
+      <el-col :span="8"><el-input class="header_search" v-model="input" placeholder="请输入内容"><el-button slot="append" icon="el-icon-search"></el-button></el-input></el-col>
       </el-row>
   </header>
 </template>
@@ -44,16 +45,26 @@ export default {
           font-size: 1.4rem
         .header_bar
           height: 30%
+          background: url('~/static/images/banner.jpg') no-repeat center
+          background-size: 100% 100%
         .right
           float: right
         .header_logo
           font-size: 36pt 
-          height: 100%
+          height: 140px
           .logo
-            width: 70%
-            height: 150px
-            background: url('~/static/images/logo1.jpg') no-repeat center
+            position: absolute
+            width: 100px
+            height: 100px
+            background: url('~/static/images/logo_1.png') no-repeat center
+            border-radius: 50%
             background-size: 100% 100%
+            top: 20px
+            left: 5%
+        .header_text
+           font-size: 2rem
+           height: 100%
+           font-color: #fff    
         .input_box
           padding: 15px
           height: 25px
