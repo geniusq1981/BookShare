@@ -1,7 +1,6 @@
 <template>
   <section class="">
     <Myheader></Myheader>
-    <Carousel></Carousel>
     <Navbar :indexClass="allparentinfo.indexclass"></Navbar>
     <div class="basicbox book-gallery">
       <BookGallery></BookGallery>

@@ -15,7 +15,7 @@
         <li>上传者：{{book.uploader}}</li>
     <li class="clickbutton">
     <el-button type="primary" class="">下 &nbsp; &nbsp; &nbsp; 载</el-button>
-    <el-button type="primary" class="righttwo">在线阅读</el-button>
+    <el-button type="primary" class="righttwo" @click="pdfViewerShow">在线阅读</el-button>
     </li>
     </div>
     </el-row>
@@ -40,20 +40,32 @@
         </div>
     </el-col>
     </el-row>
+    <pdf v-if="pdfView" @closepdf="pdfViewerhide"></pdf>
     </div>
 </template>
 <script>
+import pdf from '~/components/PDFView/PDFView'
 export default {
     data() {
         return {
-            book:{title: "诸子百家", uploader: "geniusq1981", category: "history", img: "http://www.bookshare.cn/d/file/tushufenlei/dongmanhuiben/2012-07-18/8f0213c297b5ee7d4c4b3ad79b9c540a.jpg", unid: "00001", url: "/"}
+            book:{title: "诸子百家", uploader: "geniusq1981", category: "history", img: "http://www.bookshare.cn/d/file/tushufenlei/dongmanhuiben/2012-07-18/8f0213c297b5ee7d4c4b3ad79b9c540a.jpg", unid: "00001", url: "/"},
+            pdfView: false
+        }
+    },
+    components: {
+        pdf
+    },
+    methods: {
+        pdfViewerShow() {
+            this.pdfView = true
+        },
+        pdfViewerhide() {
+            this.pdfView = false
         }
     }
 }
 </script>
 <style lang="sass">
-    .el-row
-      margin-top: 20px
     .left_area
       margin-top: 20px     
     .right_area
