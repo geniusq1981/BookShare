@@ -1,29 +1,15 @@
 <template>
   <section class="">
     <Myheader></Myheader>
-    <Navbar :indexClass="allparentinfo.indexclass"></Navbar>
+    <Navbar :indexclass="allparentinfo.indexclass"></Navbar>
     <div class="basicbox book-gallery">
+      <carousel class="Homecar"></carousel>
+      <TabCat class="Homecat"></TabCat>
+      <NewsBar></NewsBar>
+      <el-row><NewBooks class="NewBooks"></NewBooks>
+      <TopList class="TopList"></TopList>
+      </el-row>
       <BookGallery></BookGallery>
-    </div>
-    <div>
-      <app-logo/>
-      <el-button>sfsf</el-button>
-      <h1 class="title">
-        bookshare
-      </h1>
-      <h2 class="subtitle">
-        bookshare Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
     </div>
     <MyFooter></MyFooter>
   </section>
@@ -35,10 +21,18 @@ import Myheader from '~/components/Home/Myheader.vue'
 import Navbar from '~/components/Home/Navbar.vue'
 import BookGallery from '~/components/Home/BookGallery.vue'
 import MyFooter from '~/components/Home/MyFooter.vue'
+import carousel from '~/components/Home/Carousel.vue'
+import TabCat from '~/components/Home/TabCat.vue'
+import NewsBar from '~/components/Home/NewsBar.vue'
+import NewBooks from '~/components/Home/NewBooks.vue'
+import TopList from '~/components/Home/TopList.vue'
 export default {
   data () {
     return {
-      allparentinfo: {indexclass: ['首页', "test2", "test3"]}
+      allparentinfo: {indexclass: [{id: "1", title: '首页', url: "/"},
+                                  {id: "2", title: "test2", url: "/test2"},
+                                  {id: "3", title: "test3", url: "/test3"}],
+                      indexUrl: ['/','/test2','/test3']}
     }
   },
   created () {
@@ -49,6 +43,11 @@ export default {
     Myheader,
     Navbar,
     BookGallery,
+    carousel,
+    TabCat,
+    NewsBar,
+    NewBooks,
+    TopList,
     MyFooter
   }
 }
@@ -62,7 +61,16 @@ export default {
   align-items: center;
   text-align: center;
 }
-
+.Homecar {
+  display: inline-block;
+  width: 50%
+}
+.Homecat {
+  display: inline-block;
+  padding: 0 0 0 2%;
+  width: 50%;
+  height: 100%
+}
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
@@ -86,6 +94,14 @@ export default {
 
 .book-gallery {
   margin-top: 20px;
+}
+.NewBooks {
+  display: inline-block;
+  width: 65%
+}
+.TopList {
+  display: inline-block;
+  width: 35%
 }
 </style>
 

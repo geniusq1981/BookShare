@@ -117,6 +117,7 @@ export default {
     mounted() {
         let vm = this
         vm.pdfurl = "http://cdn.mozilla.net/pdfjs/tracemonkey.pdf"
+        console.log(pdfjs)
         pdfjs.getDocument(vm.pdfurl).then(function (pdfDoc_) {
             vm.pdfDoc = pdfDoc_
             vm.page_count = vm.pdfDoc.numPages
@@ -129,7 +130,6 @@ export default {
 </script>
 <style lang="sass">
     .pdfViewMask
-        position: absolute
         top: 0
         left: 0
         background-color: #aaaaaa

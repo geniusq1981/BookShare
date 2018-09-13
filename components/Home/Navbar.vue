@@ -1,7 +1,10 @@
 <template>
   <div id="Navbar" class="basicbox" style="background-color: #34495e;">
       <el-menu :default-active="activeIndex" class="main-nav" text-color="#fff" background-color="#34495e" active-text-color="#ffd04b" mode="horizontal"  @select="handleSelect">
-          <el-menu-item class="nav-item" v-for="(value,index) in indexClass" :key="value.id" :index="index">{{value}}</el-menu-item>
+           <el-menu-item class="nav-item" v-for="(value,index) in indexclass" :key="value.id" :index="index">
+             <nuxt-link :to="value.url" >{{value.title}}
+             </nuxt-link>
+           </el-menu-item>
       </el-menu>
   </div>
 </template>
@@ -14,7 +17,7 @@ export default {
       activeIndex: '1'
     }
   },
-  props: ['indexClass'],
+  props: ['indexclass'],
   methods: {
     search () {
       //this.$router.push({path: '/search/searchPage'})
@@ -24,10 +27,10 @@ export default {
     }
   },
   created () {
-    console.log(this.indexClass)
+    console.log(this.indexclass)
   },
   mounted () {
-    console.log(this.activeIndex)
+    console.log(this.indexclass)
       
   }
 }

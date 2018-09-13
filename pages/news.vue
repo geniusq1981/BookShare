@@ -3,7 +3,7 @@
     <Myheader></Myheader>
     <Navbar :indexclass="allparentinfo.indexclass"></Navbar>
     <div class="basicbox book-gallery">
-      <BookShow></BookShow>
+      <News></News>
     </div>
     <MyFooter></MyFooter>
   </section>

@@ -1,6 +1,6 @@
 <template>
     <div>
-    <el-row>
+    <el-row v-if="!pdfView">
         <el-col :span="16" class="left_area">
     <el-row>当前位置：{{book.category}}>>{{book.title}}</el-row>
     <el-row class="title_1">{{book.title}}</el-row>
