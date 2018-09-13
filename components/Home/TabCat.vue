@@ -1,7 +1,7 @@
 <template>
     <div class="tab">
 	<div class="tab-head">
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+        <el-menu :default-active="activeIndex" mode="horizontal">
     <el-menu-item v-for="(item,index) in data" :key="index" @click="changeCat(item.id)">{{item.nav}}</el-menu-item>
     </el-menu>
 	</div>
@@ -50,21 +50,20 @@ export default {
 }
 </script>
 <style lang="sass">
-    .tab-nav 
-        list-style: none;
-        font-size: 16px;
-        padding-left: 0;
+    .tab-head
+        list-style: none
+        padding: 0
         li 
             display: inline
+            font-size: 1.8rem
     .tab-body
         border-top: solid 1px #ddd
-        margin-top: -1px
-        padding-top: 15px
+        padding-top: 2px
         a
             border: 1px solid #ddd
             display: inline-block;
             float: left
-            font-size: 2rem
+            font-size: 1.5rem
             height: 40px
             line-height: 40px
             margin-left: -1px
@@ -72,7 +71,7 @@ export default {
             overflow: hidden
             position: relative
             text-align: center
-            width: 200px
+            width: 25%
     .class-nav
         overflow: hidden;
         padding-left: 1px;

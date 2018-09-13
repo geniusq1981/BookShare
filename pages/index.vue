@@ -60,16 +60,19 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  vertical-align: top;
 }
 .Homecar {
   display: inline-block;
-  width: 50%
+  width: 50%;
+  margin-top: 8px;
+  vertical-align: top;
 }
 .Homecat {
   display: inline-block;
   padding: 0 0 0 2%;
   width: 50%;
-  height: 100%
+  vertical-align: top;
 }
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
@@ -101,6 +104,7 @@ export default {
 }
 .TopList {
   display: inline-block;
+  padding-left: 20px;
   width: 35%
 }
 </style>

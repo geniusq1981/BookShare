@@ -27,7 +27,7 @@ export default {
 <style lang="sass">
     .tit
         margin-top: 20px
-        font-size: 3rem
+        font-size: 2.5rem
     .content
         padding: 20px 20px 20px 20px
         margin-top: 20px
@@ -42,11 +42,13 @@ export default {
             padding: 0px 20px 0px 20px
             .t
                 margin-top: 10px
-                font-size: 2.5rem
+                white-space: nowrap
+                overflow: hidden
+                font-size: 2.0rem
             .d
-                font-size: 1.5rem
+                font-size: 1.2rem
             .w
-                font-size: 1.5rem
+                font-size: 1.2rem
             .z
                 font-size: 1.0rem
 </style>
