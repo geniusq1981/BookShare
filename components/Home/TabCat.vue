@@ -2,13 +2,17 @@
     <div class="tab">
 	<div class="tab-head">
         <el-menu :default-active="activeIndex" mode="horizontal">
-    <el-menu-item v-for="(item,index) in data" :key="index" @click="changeCat(item.id)">{{item.nav}}</el-menu-item>
+    <el-menu-item v-for="(item,index) in data" :key="index" @click="changeCat(item.id)">
+        {{item.nav}}
+        </el-menu-item>
     </el-menu>
 	</div>
 	<div class="tab-body">
 	<div class="tab-panel" id="tab1" style="display: block;">
 	<div class="class-nav">
-        <nuxt-link v-for="(item,index) in cat_cur" :key="index" :to="item.t">{{item.t}}</nuxt-link>
+        <nuxt-link v-for="(item,index) in cat_cur" :key="index" to="/">
+            <img v-if="nav_cur==1" :src="item.s"/>
+            <div>{{item.t}}</div></nuxt-link>
 	</div>
 	</div>
 	</div>
@@ -18,23 +22,34 @@
 export default {
     data() {
         return {
-            data: [{ id: '0', nav: '图书分类', cat: [{ t: '国学经典' }, { t: '考试图书' }, { t: '文学史' },
-                  { t: '国学经典' }, { t: '考试图书' }, { t: '文学史' },
-                  { t: '国学经典' }, { t: '考试图书' }, { t: '文学史' },
-                  { t: '国学经典' }, { t: '考试图书' }, { t: '文学史' },
-                  { t: '国学经典' }, { t: '考试图书' }, { t: '文学史' },
-                  { t: '国学经典' }, { t: '考试图书' }, { t: '文学史' },
-                  { t: '国学经典' }, { t: '考试图书' }, { t: '文学史' },
-                  { t: '国学经典' }, { t: '考试图书' }, { t: '计算机' }] },
-            { id: '1', nav: '国学经典', cat: [{ t: '红楼梦' }, { t: '西游记' }, { t: '三国演义' }] },
-            { id: '2', nav: '读书导航', cat: [{ t: '庄子' }] }],
+            data: [{id: '0',
+                nav: '图书分类',
+                cat: [{ t: '国学经典', u: '/' }, { t: '考试图书', u: '/' }, { t: '文学史', u: '/' },
+                { t: '国学经典', u: '/' }, { t: '考试图书', u: '/' }, { t: '文学史', u: '/' },
+                { t: '国学经典', u: '/' }, { t: '考试图书', u: '/' }, { t: '文学史', u: '/' },
+                { t: '国学经典', u: '/' }, { t: '考试图书', u: '/' }, { t: '文学史', u: '/' },
+                { t: '国学经典', u: '/' }, { t: '考试图书', u: '/' }, { t: '文学史', u: '/' },
+                { t: '国学经典', u: '/' }, { t: '考试图书', u: '/' }, { t: '文学史', u: '/' },
+                { t: '国学经典', u: '/' }, { t: '考试图书', u: '/' }]            },
+            {id: '1', 
+            nav: '读书导航', 
+            cat: [{ t: '新浪读书', s: 'https://pic.dushu.com/201607/19/201607191316136967.png_50.jpg', u: '/' },
+            { t: '新浪读书', s: 'https://pic.dushu.com/201607/19/201607191316136967.png_50.jpg', u: '/' },
+            { t: '新浪读书', s: 'https://pic.dushu.com/201607/19/201607191316136967.png_50.jpg', u: '/' },
+            { t: '新浪读书', s: 'https://pic.dushu.com/201607/19/201607191316136967.png_50.jpg', u: '/' },
+            { t: '新浪读书', s: 'https://pic.dushu.com/201607/19/201607191316136967.png_50.jpg', u: '/' },
+            { t: '新浪读书', s: 'https://pic.dushu.com/201607/19/201607191316136967.png_50.jpg', u: '/' },
+            { t: '新浪读书', s: 'https://pic.dushu.com/201607/19/201607191316136967.png_50.jpg', u: '/' },
+            { t: '新浪读书', s: 'https://pic.dushu.com/201607/19/201607191316136967.png_50.jpg', u: '/' }]}],
             nav_cur: '图书分类',
-            cat_cur: [{ t: '国学经典' }, { t: '考试图书' }, { t: 'Web之友' }]
+            cat_cur: [{ t: '国学经典' }, { t: '考试图书' }, { t: 'Web之友' }],
+            activeIndex: 1
         }
     },
     methods: {
         changeCat(input) {
             console.log(input)
+            this.nav_cur = input
             this.cat_cur = this.data[input].cat
         }
     },
@@ -64,7 +79,6 @@ export default {
             display: inline-block;
             float: left
             font-size: 1.5rem
-            height: 40px
             line-height: 40px
             margin-left: -1px
             margin-top: -1px

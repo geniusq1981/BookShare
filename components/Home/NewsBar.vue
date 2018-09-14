@@ -1,7 +1,7 @@
 <template>
     <div>
-        <el-row class="tit">读书资讯</el-row>
-        <el-row class="content">
+        <el-row class="newstit">读书资讯</el-row>
+        <el-row class="newscontent">
             <nuxt-link v-for="(item,index) in newsdata" :key="index" to="/">
                 <img :src="item.src"/>
                 <div class="t">{{item.t}}</div>
@@ -25,10 +25,10 @@ export default {
 }
 </script>
 <style lang="sass">
-    .tit
+    .newstit
         margin-top: 20px
-        font-size: 2.5rem
-    .content
+        font-size: 3rem
+    .newscontent
         padding: 20px 20px 20px 20px
         margin-top: 20px
         height: 20%
@@ -42,13 +42,11 @@ export default {
             padding: 0px 20px 0px 20px
             .t
                 margin-top: 10px
-                white-space: nowrap
-                overflow: hidden
-                font-size: 2.0rem
+                font-size: 2.5rem
             .d
-                font-size: 1.2rem
+                font-size: 1.5rem
             .w
-                font-size: 1.2rem
+                font-size: 1.5rem
             .z
                 font-size: 1.0rem
 </style>

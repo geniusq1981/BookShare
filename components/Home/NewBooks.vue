@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-row class="tit"><span>新书推荐</span><span style="font-size:1.0rem;float:right;margin-top:20px;">更多>></span></el-row>
+        <el-row class="newtit"><span>新书推荐</span><span style="font-size:1.0rem;float:right;margin-top:20px;">更多>></span></el-row>
         <el-row class="newcontent">
             <nuxt-link v-for="(item,index) in newsdata" :key="index" to="/">
                 <img :src="item.src"/>
@@ -29,13 +29,13 @@ export default {
 }
 </script>
 <style lang="sass">
-    .tit
+    .newtit
         margin-top: 20px
         font-size: 3rem
     .newcontent
         padding: 20px 20px 20px 20px
         margin-top: 20px
-        height: 20%
+        height: 15%
         border: 1px solid #ddd
         img 
             width: 120%
@@ -47,7 +47,7 @@ export default {
             margin-top: 20px
             .t
                 margin-top: 10px
-                font-size: 2.0rem
+                font-size: 1.5rem
                 font-weight: bold
             .a
                 font-size: 1.5rem

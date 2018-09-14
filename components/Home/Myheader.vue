@@ -7,8 +7,8 @@
       </span>
       </div>
       <el-row class="basicbox header_bar">
-      <el-col :span="8" class="header_logo"><nuxt-link to="/"><div class="logo"></div></nuxt-link></el-col>
-      <el-col :span="8" class="header_text">图书分享</el-col>
+      <el-col :span="3" class="header_logo"><nuxt-link to="/"><div class="logo"></div></nuxt-link></el-col>
+      <el-col :span="13" class="header_text">图书分享</el-col>
       <el-col :span="8"><el-input class="header_search" v-model="input" placeholder="请输入内容"><el-button slot="append" icon="el-icon-search"></el-button></el-input></el-col>
       </el-row>
   </header>
@@ -64,6 +64,8 @@ export default {
         .header_text
            font-size: 2rem
            height: 100%
+           line-height: 100%
+           vertical-align: middle
            font-color: #fff    
         .input_box
           padding: 15px
